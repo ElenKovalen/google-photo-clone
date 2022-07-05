@@ -1,45 +1,6 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
   margin: 20;
+  height: 100vh;
 }
 
-.header-content {
-  width: 100%;
-  background: red;
-  display: flex;
-  justify-content: space-around;
-  padding-left: 8%;
-  padding-right: 8%;
-  box-sizing: border-box;
-}
-
-.logo-image{
-  margin-top: 10px;
-  width: 100px;
-}
-
-.header-search{
-  background-color: #d2e5f2;
-  border: none;
-  border-radius: 5px;
-  font-size: 23px;
-  color: rgb(114, 146, 146);
-}
-
-.header-buttons-group {
-  flex: 1;
-  text-align: right;
-  justify-content: end;
-}
-
-li {
-  list-style: none;
-  display: inline-block;
-  margin-left: 60px;
-}
-
-a {
-  text-decoration: none;
-  color: darkslategrey;
-  font-size: 23px;
-}
