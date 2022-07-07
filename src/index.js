@@ -1,40 +1,15 @@
-class Summator {
-    constructor(a, b) {
-        this.a = a;
-        this.b = b;
-        console.log(this);
-    }
-    
-    getSum() {
-        return this.a + this.b;
-    }   
+const photos = [
+  {url: "/img/IMG_20220619_203148.jpg", name: "photo1"},
+  {url: "/img/IMG_20220619_203148.jpg", name: "photo2"},
+  {url: "/img/IMG_20220623_184728.jpg", name: "photo3"},
+  {url: "/img/IMG_20220628_185603.jpg", name: "photo4"},
+  {url: "/img/IMG_20220629_195159.jpg", name: "photo5"},
+  {url: "/img/IMG_20220701_183319.jpg", name: "photo6"},
+  {url: "/img/IMG_20220703_175555.jpg", name: "photo7"},
+  {url: "/img/IMG_20220703_182254.jpg", name: "photo8"},
+  {url: "/img/IMG_20220704_082443.jpg", name: "photo9"},
+];
 
-    getSquare() {
-        return this.getSum() * 2;
-    }
-};
-
-const s1 = new Summator(1, 2);
-const s2 = new Summator(3, 2);
-
-console.log("sum", s1.getSum());
-s1.a = 5;
-console.log(s1.a);
-
-// example
-const user = {
-    name: Maksim,
-    dateOfBirth: 2001,
-
-    getName() {
-        return this.name;
-    },
-    calculateAge() {
-      const currentYear = new Date().getFullYear();
-      return currentYear - this.dateOfBirth(); 
-    }, 
-};
-
-console.log(user.getName);
-console.log(currentYear);
-
+const node = document.getElementById("templateCard");
+const clone = node.cloneNode(true);
+document.getElementById("templateCard").appendChild(clone);
