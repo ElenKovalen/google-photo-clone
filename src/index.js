@@ -1,4 +1,4 @@
-const photos = [
+let photos = [
   {url: "/img/IMG_20220619_203148.jpg", name: "photo1"},
   {url: "/img/IMG_20220619_203148.jpg", name: "photo2"},
   {url: "/img/IMG_20220623_184728.jpg", name: "photo3"},
@@ -12,4 +12,17 @@ const photos = [
 
 const node = document.getElementById("templateCard");
 const clone = node.cloneNode(true);
-document.getElementById("templateCard").appendChild(clone);
+document.getElementById("templateCard").appendChild(clone); 
+
+let photo2 = document.getElementById("photoLink").innerHTML = photos[3];
+console.log(photo2);
+
+photos.forEach(photo => console.log(photo));
+
+let arr = document.getElementById("templateCard");
+let newArr = arr.innerHTML = photos;
+console.log(newArr);
+
+for (let i = 0; i< photos.length; i++)
+console.log(photos[i]);
+
