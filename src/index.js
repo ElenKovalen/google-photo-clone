@@ -15,13 +15,21 @@ const photos = [
 // 3. Change url and name in the clone
 // 4. Append child
 
-// 1.Method for
+// 1. Method for
+// for (let i = 0; i < photos.length; i++) {
+//   const photo = photos[i]; 
+//   const node = document.getElementById("templateCard");
+//   const clone = node.cloneNode(true);
+//   clone.querySelector("img").src = photos[i].url;
+//   clone.querySelector(".card-text").name = photos[i].name;
+//   document.getElementById("templateCard").appendChild(clone); 
+// };
 
-for (let i = 0; i < photos.length; i++) {
-  const photo = photos[i]; 
+// 2. Method forEach
+photos.forEach(photo => {
   const node = document.getElementById("templateCard");
   const clone = node.cloneNode(true);
-  clone.querySelector("img").src = photos[i].url;
-  clone.querySelector(".card-text").name = photos[i].name;
-  document.getElementById("templateCard").appendChild(clone); 
-};
+  clone.querySelector("img").src = photo.url;
+  clone.querySelector(".card-text").name = photo.name;
+  document.getElementById("templateCard").appendChild(clone);
+});
