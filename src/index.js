@@ -1,8 +1,8 @@
 const photos = [
   {url: "/img/images (1).jfif", name: "photo1"},
-  {url: "/img/images (2).jfif", name: "photo2"},
+  {url: "/img/images (10).jfif", name: "photo2"},
   {url: "/img/images (3).jfif", name: "photo3"},
-  {url: "/img/images (4).jfif", name: "photo4"},
+  {url: "/img/images (11).jfif", name: "photo4"},
   {url: "/img/images (5).jfif", name: "photo5"},
   {url: "/img/images (6).jfif", name: "photo6"},
   {url: "/img/images (7).jfif", name: "photo7"},
@@ -25,11 +25,11 @@ const photos = [
 //   document.getElementById("templateCard").appendChild(clone); 
 // };
 
-// 2. Method forEach
 photos.forEach(photo => {
-  const node = document.getElementById("templateCard");
+  const node = document.querySelector(".col-4");
   const clone = node.cloneNode(true);
   clone.querySelector("img").src = photo.url;
-  clone.querySelector(".card-text").name = photo.name;
+  clone.querySelector("p").name = photo.name;
   document.getElementById("templateCard").appendChild(clone);
 });
+
