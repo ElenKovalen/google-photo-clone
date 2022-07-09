@@ -26,10 +26,11 @@ const photos = [
 // };
 
 // 2. Method forEach
+
 photos.forEach(photo => {
-  const node = document.getElementById("templateCard");
+  const node = document.querySelector(".col-4");
   const clone = node.cloneNode(true);
   clone.querySelector("img").src = photo.url;
-  clone.querySelector(".card-text").name = photo.name;
+  clone.querySelector("p").name = photo.name;
   document.getElementById("templateCard").appendChild(clone);
 });
