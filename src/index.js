@@ -10,26 +10,30 @@ const photos = [
   {url: "/img/images (9).jfif", name: "photo9"},
 ];
 
-// 1. Iterate through our array 
-// 2. Clone a template card 
-// 3. Change url and name in the clone
-// 4. Append child
-
-// 1. Method for
-// for (let i = 0; i < photos.length; i++) {
-//   const photo = photos[i]; 
-//   const node = document.getElementById("templateCard");
-//   const clone = node.cloneNode(true);
-//   clone.querySelector("img").src = photos[i].url;
-//   clone.querySelector(".card-text").name = photos[i].name;
-//   document.getElementById("templateCard").appendChild(clone); 
-// };
-
-photos.forEach(photo => {
-  const node = document.querySelector(".col-4");
+function addNewPhoto(photo, i) {
+  const node = document.querySelector(".template-card");
   const clone = node.cloneNode(true);
   clone.querySelector("img").src = photo.url;
   clone.querySelector("p").name = photo.name;
-  document.getElementById("templateCard").appendChild(clone);
-});
+  document.querySelector(".photo-container").appendChild(clone);
+};
+
+const clickHandler = (event) => {
+  const target = event.target;
+  if (target.classList.contains('view-button')) {
+    target.classList.add('bg-success'); 
+  }
+  else if (target.classList.contains('edit-button')) {
+    target.classList.add('bg-danger'); 
+  }
+};
+
+// for (let i = 0; i < photos.length; i++) {
+//   addNewPhoto(photos[i]);
+// };
+
+photos.forEach(addNewPhoto);
+
+document.querySelectorAll(".view-button").forEach((e) => e.addEventListener('click', clickHandler)); 
+document.querySelectorAll(".edit-button").forEach((e) => e.addEventListener('click', clickHandler)); 
 
