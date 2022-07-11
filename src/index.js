@@ -10,15 +10,12 @@ const photos = [
   {url: "/img/images (9).jfif", name: "photo9"},
 ];
 
-function addNewPhoto(photo, i) {
-  const node = document.querySelector(".template-card");
-  const clone = node.cloneNode(true);
+photos.forEach((photo, i) => {
+  const clone = document.querySelector(".template-card").cloneNode(true);
   clone.querySelector("img").src = photo.url;
   clone.querySelector("p").name = photo.name;
   document.querySelector(".photo-container").appendChild(clone);
-};
-
-photos.forEach(addNewPhoto);
+});
 
 document.querySelectorAll(".view-button").forEach(e => e.addEventListener('click', e => e.target.classList.toggle('bg-success'))); 
-document.querySelectorAll(".edit-button").forEach(e => e.addEventListener('click', e => e.target.classList.toggle('bg-danger'))); 
+document.querySelectorAll(".edit-button").forEach(e => e.addEventListener('click', e => e.target.classList.toggle('bg-danger')));
