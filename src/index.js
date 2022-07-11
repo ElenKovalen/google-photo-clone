@@ -18,13 +18,22 @@ function addNewPhoto(photo, i) {
   document.querySelector(".photo-container").appendChild(clone);
 };
 
-const clickHandler = (event) => {
+const clickHandler = (event) => { 
   const target = event.target;
+
   if (target.classList.contains('view-button')) {
-    target.classList.add('bg-success'); 
+    if (target.classList.contains('bg-success')) {
+      target.classList.remove('bg-success'); 
+    } else {
+      target.classList.add('bg-success');
+    }
   }
   else if (target.classList.contains('edit-button')) {
-    target.classList.add('bg-danger'); 
+    if (target.classList.contains('bg-danger')) {
+      target.classList.remove('bg-danger'); 
+    } else {
+      target.classList.add('bg-danger');
+    }
   }
 };
 
