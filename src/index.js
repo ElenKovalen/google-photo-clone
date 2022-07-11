@@ -22,18 +22,10 @@ const clickHandler = (event) => {
   const target = event.target;
 
   if (target.classList.contains('view-button')) {
-    if (target.classList.contains('bg-success')) {
-      target.classList.remove('bg-success'); 
-    } else {
-      target.classList.add('bg-success');
-    }
+    target.classList.toggle('bg-success');
   }
   else if (target.classList.contains('edit-button')) {
-    if (target.classList.contains('bg-danger')) {
-      target.classList.remove('bg-danger'); 
-    } else {
-      target.classList.add('bg-danger');
-    }
+    target.classList.toggle('bg-danger');
   }
 };
 
