@@ -18,23 +18,15 @@ function addNewPhoto(photo, i) {
   document.querySelector(".photo-container").appendChild(clone);
 };
 
-const clickHandler = (event) => { 
-  const target = event.target;
-
-  if (target.classList.contains('view-button')) {
-    target.classList.toggle('bg-success');
-  }
-  else if (target.classList.contains('edit-button')) {
-    target.classList.toggle('bg-danger');
-  }
+const viewButtonClickHandler = (event) => { 
+  event.target.classList.toggle('bg-success');
 };
 
-// for (let i = 0; i < photos.length; i++) {
-//   addNewPhoto(photos[i]);
-// };
+const editButtonClickHandler = (event) => {
+  event.target.classList.toggle('bg-danger');
+};
 
 photos.forEach(addNewPhoto);
 
-document.querySelectorAll(".view-button").forEach((e) => e.addEventListener('click', clickHandler)); 
-document.querySelectorAll(".edit-button").forEach((e) => e.addEventListener('click', clickHandler)); 
-
+document.querySelectorAll(".view-button").forEach((e) => e.addEventListener('click', viewButtonClickHandler)); 
+document.querySelectorAll(".edit-button").forEach((e) => e.addEventListener('click', editButtonClickHandler)); 
