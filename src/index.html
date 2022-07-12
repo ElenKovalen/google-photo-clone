@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="index.css">
   </head>
 <body>
+  <!-- Header -->
   <header class="py-3 border-bottom header">
     <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
       <div class="dropdown">
@@ -50,16 +51,88 @@
       </div>
     </div>
   </header>
+  <!-- Main conteiner -->
   <div class="container-fluid p-3 main-content">
     <div class="d-grid gap-3 h-100" style="grid-template-columns: 1fr 2fr;">
-      <div class="bg-light border rounded-3">
-        <br><br><br><br><br><br><br><br><br><br>
+  <!-- Side bar -->
+      <div class="side-bar bg-light border rounded-3">
+        <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            <span class="fs-4">Google photos</span>
+          </a>
+          <hr>
+          <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link active" aria-current="page">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#photos"></use></svg>
+                Photos
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-dark">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#explore"></use></svg>
+                Explore
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-dark">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+                Sharing
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-dark">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+                Favourites
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-dark">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+                Albums
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-dark">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#Utilities"></use></svg>
+                Utilities
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-dark">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#Archive"></use></svg>
+                Archive
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-dark">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#bin"></use></svg>
+                Bin
+              </a>
+            </li>
+          </ul>
+          <hr>
+          <div class="dropdown">
+            <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+              <strong>Account</strong>
+            </a>
+            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+              <li><a class="dropdown-item" href="#">New project...</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <!-- <div  class="bg-light border rounded-3"> -->
+<!-- Photo container -->
         <div class="photo-container row p-2 bg-light border rounded-3">
           <div class="template-card col-4 my-2">
             <div class="card bg-light p-2 border rounded-3">
-              <img class="rounded-3" src="/img/images.jfif">
+              <img class="img-item rounded-3 " src="/img/images.jfif">
                 <div class="card-body">
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                    <div class="d-flex justify-content-between align-items-center">
@@ -73,7 +146,6 @@
             </div>
           </div>
         </div>
-    <!-- </div> -->
   </div>
 <script src="index.js"></script>
 <script src="test.js"></script>
