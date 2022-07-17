@@ -14,12 +14,12 @@
   </head>
 <body>
 <!-- Header -->
-  <header class="py-3 border-bottom header">
-    <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
-      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+  <header class="header py-3 border bg-light">
+    <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 3fr;">
+      <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
         <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
         <span class="fs-4">Google photos</span>
-      </a>
+      </div>
       <div class="d-flex align-items-center">
         <form class="w-100 me-3" role="search">
           <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
@@ -40,11 +40,11 @@
     </div>
   </header>
 <!-- Main conteiner -->
-  <div class="container-fluid p-3 main-content">
-    <div class="d-grid gap-3 h-100" style="grid-template-columns: 1fr 2fr;">
+  <div class="main-content container-fluid py-1 ">
+    <div class="d-grid gap-3" style="grid-template-columns: 1fr 5.5fr;">
 <!-- Side bar -->
-    <div class="side-bar bg-light border rounded-3">
-      <div class="d-flex flex-column p-2 h-100 bg-light" style="width: 280px;">
+    <div class="side-bar bg-light border p-2">
+      <div class="d-flex flex-column  bg-light" style="width: 200px;">
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
             <a href="#" class="nav-link active" aria-current="page">
@@ -101,14 +101,14 @@
       </div>
     </div>
 <!-- Photo container -->
-<div class="photo-container-main"> 
-  <div class="photo-container row p-2 bg-light border rounded-3">
+ <div class="main-container row ">  
+  <div class="photo-container col p-2 bg-light border d-flex flex-wrap">
   </div>
-  <div class="pagination p-2 bg-light border rounded-3 d-flex justify-content-between align-items-center">
-    <div class="listingTable"></div>
-      <a class="btn_next" href="javascript:prevPage()">Prev</a>
-      <a class="btn_next" href="javascript:nextPage()">Next</a>
-      page: <span class="page"></span>
+  <div class="pagination row p-2 mt-1 bg-light border mx-auto">
+    <div class="listingTable align-items-center"></div>
+      <a class="btn_next col-3" href="javascript:prevPage()">Prev</a>
+      <a class="btn_next col-3" href="javascript:nextPage()">Next</a>
+      page: <span class="page col-3"></span>
     </div>
   </div>
 </div> 

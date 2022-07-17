@@ -30,8 +30,8 @@ const photos = [
 //       const div = document.createElement("div");
 //       div.className = "template-card col-3 my-1";
 //       div.innerHTML = '<div class="bg-light">' +
-//     '<div class="card bg-light p-1 border rounded-3">' +
-//     '   <img class="img-item rounded-3">' +
+//     '<div class="card bg-light p-1 border">' +
+//     '   <img class="img-item">' +
 //     '     <div class="card-body">' +
 //     '       <p class="card-text"> </p>' +
 //     '<div class="d-flex justify-content-between align-items-center">' +
@@ -86,10 +86,10 @@ function changePage(page) {
     const div = document.createElement("div");
     div.className = "template-card col-3 my-1";
     div.innerHTML = '<div class="bg-light">' +
-  '<div class="card bg-light p-1 border rounded-3">' +
-  '   <img class="img-item rounded-3">' +
+  '<div class="card bg-light p-1 m-1 border">' +
+  '   <img class="img-item img-fluid">' +
   '     <div class="card-body">' +
-  '       <p class="card-text"> </p>' +
+  '       <p class="card-text "> </p>' +
   '<div class="d-flex justify-content-between align-items-center">' +
   '  <div class="btn-group">' +
   '     <button type="button" class="view-button btn btn-sm btn-outline-secondary">View</button>' +
@@ -124,3 +124,7 @@ function numPages() {
 window.onload = function() {
     changePage(1);
 }
+
+document.querySelectorAll(".img-item").forEach(e => e.addEventListener('click', e => e.target.classList.toggle("active"))); 
+
+photos.forEach(addNewPhoto);
