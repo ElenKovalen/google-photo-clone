@@ -1,7 +1,7 @@
 const photos = [
   {url: "/img/images (1).jfif", name: "photo 1"},
-  {url: "/img/images (10).jfif", name: "photo 2"},
-  {url: "/img/images (3).jfif", name: "photo 3"},
+  {url: "/img/images (3).jfif", name: "photo 2"},
+  {url: "/img/images (10).jfif", name: "photo 3"},
   {url: "/img/images (11).jfif", name: "photo 4"},
   {url: "/img/images (5).jfif", name: "photo 5"},
   {url: "/img/images (6).jfif", name: "photo 6"},
@@ -37,7 +37,7 @@ const photos = [
 //     '<div class="d-flex justify-content-between align-items-center">' +
 //     '  <div class="btn-group">' +
 //     '     <button type="button" class="view-button btn btn-sm btn-outline-secondary">View</button>' +
-//     '     <button type="button" class="edit-button btn btn-sm btn-outline-secondary">Edit</button>' +
+//     '     <button type="button" class="delete-button btn btn-sm btn-outline-secondary">Edit</button>' +
 //     '  </div>' +
 //     '    <small class="text-muted">9 mins</small>' +
 //     '</div></div></div></div>';
@@ -49,7 +49,7 @@ const photos = [
 // photos.forEach(addNewPhoto);
 
 // document.querySelectorAll(".view-button").forEach(e => e.addEventListener('click', e => e.target.classList.toggle('bg-success'))); 
-// document.querySelectorAll(".edit-button").forEach(e => e.addEventListener('click', e => e.target.classList.toggle('bg-danger')));
+// document.querySelectorAll(".delete-button").forEach(e => e.addEventListener('click', e => e.target.classList.toggle('bg-danger')));
 
 // document.querySelectorAll(".img-item").forEach(e => e.addEventListener('click', e => e.target.classList.toggle("active"))); 
 
@@ -84,16 +84,16 @@ function changePage(page) {
 
   for (let i = (page-1) * records_per_page; i < (page * records_per_page) && i < photos.length; i++) {
     const div = document.createElement("div");
-    div.className = "template-card col col-lg-4 col -md-3 my-1";
+    div.className = "template-card col col-lg-4 col-md-4 my-1";
     div.innerHTML = '<div class="bg-light ">' +
   '<div class="card bg-light p-1 m-1 border ">' +
   '   <img class="img-item img-fluid rounded">' +
   '     <div class="card-body">' +
   '       <p class="card-text "> </p>' +
-  '<div class="d-grid">' +
-  '  <div class="btn-group col-9 mx-auto">' +
-  '     <button type="button" class="view-button btn btn-mg btn-outline-primary">View</button>' +
-  '     <button type="button" class="edit-button btn btn-mg btn-outline-primary">Edit</button>' +
+  '<div class="d-grid justify-content-center">' +
+  '  <div class="btn-group col-md-4 col-lg-2">' +
+  '     <button type="button" class="view-button btn btn-outline-primary">View</button>' +
+  '     <button type="button" class="delete-button btn btn-outline-primary">Delete</button>' +
   '  </div></div></div>';
   div.querySelector("img").src = photos[i].url;
   div.querySelector(".card-text").innerText = photos[i].name;

@@ -20,5 +20,28 @@ body {
 }
 
 @media (max-width: 768px) {
-  .sidebar {display:none;}
+  .sidebar {display: none;}
 }
+
+.logo {
+  font-size: 20px;
+}
+
+@media (min-width:768px) {
+   .logo {
+    font-size: 18px;
+    }
+}
+
+@media (min-width:1024px) {
+  .logo {
+    font-size: 16px;
+  }
+}
+
+@media (min-width:1280px) {
+  .logo {
+    font-size: 14px;
+  }
+}
+
