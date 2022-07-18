@@ -56,7 +56,7 @@ const photos = [
 // Pagination
 
 let current_page = 1;
-let records_per_page = 8;
+let records_per_page = 6;
 
 function prevPage() {
   if (current_page > 1) {
@@ -84,19 +84,17 @@ function changePage(page) {
 
   for (let i = (page-1) * records_per_page; i < (page * records_per_page) && i < photos.length; i++) {
     const div = document.createElement("div");
-    div.className = "template-card col-3 my-1";
-    div.innerHTML = '<div class="bg-light">' +
-  '<div class="card bg-light p-1 m-1 border">' +
-  '   <img class="img-item img-fluid">' +
+    div.className = "template-card col col-lg-4 col -md-3 my-1";
+    div.innerHTML = '<div class="bg-light ">' +
+  '<div class="card bg-light p-1 m-1 border ">' +
+  '   <img class="img-item img-fluid rounded">' +
   '     <div class="card-body">' +
   '       <p class="card-text "> </p>' +
-  '<div class="d-flex justify-content-between align-items-center">' +
-  '  <div class="btn-group">' +
-  '     <button type="button" class="view-button btn btn-sm btn-outline-secondary">View</button>' +
-  '     <button type="button" class="edit-button btn btn-sm btn-outline-secondary">Edit</button>' +
-  '  </div>' +
-  '    <small class="text-muted">9 mins</small>' +
-  '</div></div></div></div>';
+  '<div class="d-grid">' +
+  '  <div class="btn-group col-9 mx-auto">' +
+  '     <button type="button" class="view-button btn btn-mg btn-outline-primary">View</button>' +
+  '     <button type="button" class="edit-button btn btn-mg btn-outline-primary">Edit</button>' +
+  '  </div></div></div>';
   div.querySelector("img").src = photos[i].url;
   div.querySelector(".card-text").innerText = photos[i].name;
   document.querySelector(".photo-container").appendChild(div);

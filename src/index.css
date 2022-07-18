@@ -4,7 +4,6 @@
 
 body {
   /* font-family: 'Roboto', sans-serif; */
-  margin: 20;
   height: 100vh;
 }
 
@@ -16,8 +15,10 @@ body {
   height: calc(100vh - var(--header-height));
 }
 
-.image-item
-.active {
+.image-item .active {
   border: 10px solid red;
 }
 
+@media (max-width: 768px) {
+  .sidebar {display:none;}
+}
