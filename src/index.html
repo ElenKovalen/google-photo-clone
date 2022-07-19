@@ -133,10 +133,17 @@
   <div class="main-container container">
     <div class="photo-container row bg-light border "></div>
     <div class="pagination row p-2 mt-2 bg-light border">
-      <div class="listingTable align-items-center"></div>
-      <a class="btn_next col-3" href="javascript:prevPage()">Prev</a>
-      <a class="btn_next col-3" href="javascript:nextPage()">Next</a>
-      page: <span class="page col-3"></span>
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
     </div>
   </div>  
 </div> 
