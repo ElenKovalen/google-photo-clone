@@ -38,3 +38,12 @@ body {
     display: none;
   }
 }
+
+.show {
+  position: absolute;
+  height: 500px;
+  width: 700px;
+  padding: 5px;
+  left: 50vh;
+  z-index: 1;
+}

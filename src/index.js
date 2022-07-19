@@ -26,102 +26,27 @@ const photos = [
   {url: "/img/images (11).jfif", name: "photo 4"},
 ];
 
-// const addNewPhoto = (photo) => {
-//       const div = document.createElement("div");
-//       div.className = "template-card col-3 my-1";
-//       div.innerHTML = '<div class="bg-light">' +
-//     '<div class="card bg-light p-1 border">' +
-//     '   <img class="img-item">' +
-//     '     <div class="card-body">' +
-//     '       <p class="card-text"> </p>' +
-//     '<div class="d-flex justify-content-between align-items-center">' +
-//     '  <div class="btn-group">' +
-//     '     <button type="button" class="view-button btn btn-sm btn-outline-secondary">View</button>' +
-//     '     <button type="button" class="delete-button btn btn-sm btn-outline-secondary">Edit</button>' +
-//     '  </div>' +
-//     '    <small class="text-muted">9 mins</small>' +
-//     '</div></div></div></div>';
-//     div.querySelector("img").src = photo.url;
-//     div.querySelector(".card-text").innerText = photo.name;
-//     document.querySelector(".photo-container").appendChild(div);
-// };
-
-// photos.forEach(addNewPhoto);
-
-// document.querySelectorAll(".view-button").forEach(e => e.addEventListener('click', e => e.target.classList.toggle('bg-success'))); 
-// document.querySelectorAll(".delete-button").forEach(e => e.addEventListener('click', e => e.target.classList.toggle('bg-danger')));
-
-// document.querySelectorAll(".img-item").forEach(e => e.addEventListener('click', e => e.target.classList.toggle("active"))); 
-
-// Pagination
-
-let current_page = 1;
-let records_per_page = 6;
-
-function prevPage() {
-  if (current_page > 1) {
-      current_page--;
-      changePage(current_page);
-  }
-}
-
-function nextPage() {
-  if (current_page < numPages()) {
-      current_page++;
-      changePage(current_page);
-  }
-}
-    
-function changePage(page) {
-  let btn_next = document.querySelector(".btn_next");
-  let btn_prev = document.querySelector(".btn_prev");
-  let page_span = document.querySelector(".page");
-
-  if (page < 1) page = 1;
-  if (page > numPages()) page = numPages();
-
-  document.querySelector(".listingTable").innerHTML = "";
-
-  for (let i = (page-1) * records_per_page; i < (page * records_per_page) && i < photos.length; i++) {
+const addNewPhoto = (photo) => {
     const div = document.createElement("div");
     div.className = "template-card col col-lg-4 col-md-4 my-1";
-    div.innerHTML = '<div class="card bg-light p-1 m-1 border ">' +
-  '   <img class="img-item img-fluid rounded">' +
-  '     <div class="card-body">' +
-  '       <p class="card-text "> </p>' +
-  '<div class="d-flex justify-content-between">' +
-  '  <div class="btn-group col-md-4 col-lg-2">' +
-  '     <button type="button" class="view-button btn btn-outline-primary">View</button>' +
-  '     <button type="button" class="delete-button btn btn-outline-primary">Delete</button>' +
-  '  </div></div></div>';
-  div.querySelector("img").src = photos[i].url;
-  div.querySelector(".card-text").innerText = photos[i].name;
-  document.querySelector(".photo-container").appendChild(div);
-  }
-
-  page_span.innerHTML = page + "/" + numPages();
-
-  if (page == 1) {
-      btn_prev.style.visibility = "hidden";
-  } else {
-      btn_prev.style.visibility = "visible";
-  }
-
-  if (page == numPages()) {
-      btn_next.style.visibility = "hidden";
-  } else {
-      btn_next.style.visibility = "visible";
-  }
-}
-
-function numPages() {
-    return Math.ceil(photos.length / records_per_page);
-}
-
-window.onload = function() {
-    changePage(1);
-}
-
-// document.querySelectorAll(".img-item").forEach(e => e.addEventListener('click', e => e.target.classList.toggle("active"))); 
+    div.innerHTML = '<div class="bg-light ">' +
+      '<div class="card bg-light p-1 m-1 border ">' +
+      '   <img class="img-item rounded">' +
+      '     <div class="card-body">' +
+      '       <p class="card-text "> </p>' +
+      '<div class="d-grid justify-content-center">' +
+      '  <div class="btn-group col-md-4 col-lg-2">' +
+      '     <button type="button" class="view-button btn btn-outline-primary">View</button>' +
+      '     <button type="button" class="delete-button btn btn-outline-primary">Delete</button>' +
+      '  </div></div></div>';
+    div.querySelector("img").src = photo.url;
+    div.querySelector(".card-text").innerText = photo.name;
+    document.querySelector(".photo-container").appendChild(div);
+};
 
 photos.forEach(addNewPhoto);
+
+document.querySelectorAll(".view-button").forEach(e => e.addEventListener('click', e => e.target.classList.toggle('bg-success'))); 
+document.querySelectorAll(".delete-button").forEach(e => e.addEventListener('click', e => e.target.classList.toggle('bg-danger')));
+
+document.querySelectorAll(".img-item").forEach(e => e.addEventListener('click', e => e.target.classList.toggle("show"))); 
