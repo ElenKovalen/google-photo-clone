@@ -19,29 +19,22 @@ body {
   border: 10px solid red;
 }
 
-@media (max-width: 768px) {
-  .sidebar {display: none;}
+.side-bar-width {
+  width: 180px;
 }
 
-.logo {
-  font-size: 20px;
-}
+@media (max-width: 745px) {
+  .side-bar-width  {
+    width: 70px;
+  }
+  .sidebar-list {
+    display: none;
+    background: none; 
+  }
+} 
 
-@media (min-width:768px) {
-   .logo {
-    font-size: 18px;
-    }
-}
-
-@media (min-width:1024px) {
-  .logo {
-    font-size: 16px;
+@media (max-width:665px) {
+  .google {
+    display: none;
   }
 }
-
-@media (min-width:1280px) {
-  .logo {
-    font-size: 14px;
-  }
-}
-

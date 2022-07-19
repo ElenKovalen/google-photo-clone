@@ -85,12 +85,11 @@ function changePage(page) {
   for (let i = (page-1) * records_per_page; i < (page * records_per_page) && i < photos.length; i++) {
     const div = document.createElement("div");
     div.className = "template-card col col-lg-4 col-md-4 my-1";
-    div.innerHTML = '<div class="bg-light ">' +
-  '<div class="card bg-light p-1 m-1 border ">' +
+    div.innerHTML = '<div class="card bg-light p-1 m-1 border ">' +
   '   <img class="img-item img-fluid rounded">' +
   '     <div class="card-body">' +
   '       <p class="card-text "> </p>' +
-  '<div class="d-grid justify-content-center">' +
+  '<div class="d-flex justify-content-between">' +
   '  <div class="btn-group col-md-4 col-lg-2">' +
   '     <button type="button" class="view-button btn btn-outline-primary">View</button>' +
   '     <button type="button" class="delete-button btn btn-outline-primary">Delete</button>' +
@@ -123,6 +122,6 @@ window.onload = function() {
     changePage(1);
 }
 
-document.querySelectorAll(".img-item").forEach(e => e.addEventListener('click', e => e.target.classList.toggle("active"))); 
+// document.querySelectorAll(".img-item").forEach(e => e.addEventListener('click', e => e.target.classList.toggle("active"))); 
 
 photos.forEach(addNewPhoto);
