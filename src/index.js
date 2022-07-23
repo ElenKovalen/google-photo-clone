@@ -53,8 +53,8 @@ document.querySelectorAll(".img-item").forEach(e => e.addEventListener('click', 
 
 // Pagination
 
-let table = document.querySelector('#table');
-let pagination = document.querySelector('#pagination');
+let table = document.querySelector('.photo-container');
+let pagination = document.querySelector('.pagination');
 
 let notesOnPage = 6;
 let countOfItems = Math.ceil(photos.length / notesOnPage);
@@ -62,6 +62,7 @@ let countOfItems = Math.ceil(photos.length / notesOnPage);
 let items = [];
 for (let i = 1; i <= countOfItems; i++) {
   let li = document.createElement('li');
+  li.className = "page-item m-1 page-link rounded";
   li.innerHTML = i;
   pagination.appendChild(li);
   items.push(li);
@@ -69,7 +70,7 @@ for (let i = 1; i <= countOfItems; i++) {
 
 for (let item of items) {
     item.addEventListener('click', function() {
-      let activeButton = document.querySelector('#pagination li.activeButton');
+      let activeButton = document.querySelector('.pagination li.activeButton');
         if (activeButton) {
         activeButton.classList.remove('activeButton');
         };
