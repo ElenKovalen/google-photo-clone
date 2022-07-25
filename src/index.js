@@ -1,8 +1,8 @@
 const photos = [
-  {url: "/img/images (1).jfif", name: "photo 1"},
-  {url: "/img/images (3).jfif", name: "photo 2"},
-  {url: "/img/images (10).jfif", name: "photo 3"},
-  {url: "/img/images (11).jfif", name: "photo 4"},
+  {url: "/img/animal-6717792_1920.jpg", name: "photo 1"},
+  {url: "/img/architecture-3824660_1920.jpg", name: "photo 2"},
+  {url: "/img/bird-7071408_1920.jpg", name: "photo 3"},
+  {url: "/img/bird-7145813_1920.jpg", name: "photo 4"},
   {url: "/img/images (5).jfif", name: "photo 5"},
   {url: "/img/images (6).jfif", name: "photo 6"},
   {url: "/img/images (7).jfif", name: "photo 7"},
@@ -85,7 +85,7 @@ function changePage(page) {
     div.className = 'template-card col col-lg-4 col-md-4 my-1';
     div.innerHTML = '<div class="bg-light">' +
   '<div class="card bg-light p-1 border">' +
-  '   <img class="img-item rounded">' +
+  ' <div class="d-flex justify-content-center"> <img class="img-item rounded "> </div>' +
   '     <div class="card-body">' +
   '       <p class="card-text"> </p>' +
   '<div class="d-grid justify-content-center">' +
@@ -95,6 +95,7 @@ function changePage(page) {
   '</div></div></div>';
     div.querySelector("img").src = photos[i].url;
     div.querySelector(".card-text").innerText = photos[i].name;
+    div.querySelector("img").addEventListener('click', e => e.target.classList.toggle('show'));
     document.querySelector(".photo-container").appendChild(div);
   }
 

@@ -15,9 +15,11 @@ body {
   height: calc(100vh - var(--header-height));
 }
 
-.image-item .active {
-  border: 10px solid red;
+.img-item {
+  max-height: 150px;
+  width: auto;
 }
+
 
 .side-bar-width {
   width: 180px;
