@@ -1,7 +1,7 @@
 export class Image {
-  constructor({url, name}) {
+  constructor({url, title}) {
     this.url = url;
-    this.name = name;
+    this.title = title;
   }
 
   show(place) {
@@ -19,7 +19,7 @@ export class Image {
       '<button type="button" class="delete-button btn btn-outline-primary">Delete</button>' +
       '</div></div></div>';
     div.querySelector("img").src = this.url;
-    div.querySelector(".card-text").innerText = this.name;
+    div.querySelector(".card-text").innerText = this.title;
     div.querySelector("img").addEventListener("click", (e) => e.target.classList.toggle("show"));
     place.appendChild(div);
   }
