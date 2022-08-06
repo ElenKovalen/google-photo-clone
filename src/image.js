@@ -10,7 +10,7 @@ export class Image {
     div.innerHTML = '<div class="bg-light">' +
       '<div class="card bg-light p-1 border">' +
       '<div class="d-flex justify-content-center">' + 
-      '<img class="img-item rounded "> </div>' +
+      '<img class="img-item rounded"></div>' +
       '<div class="card-body">' +
       '<p class="card-text"> </p>' +
       '<div class="d-grid justify-content-center">' +
