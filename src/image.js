@@ -15,7 +15,7 @@ export class Image {
       '<p class="card-text"> </p>' +
       '<div class="d-grid justify-content-center">' +
       '<div class="btn-group col-md-4 col-lg-2">' +
-      '<button type="button" class="view-button btn btn-outline-primary">View</button>' +
+      '<button type="button" class="archive-button btn btn-outline-primary">Archive</button>' +
       '<button type="button" class="delete-button btn btn-outline-primary">Delete</button>' +
       '</div></div></div>';
     div.querySelector("img").src = this.url;
